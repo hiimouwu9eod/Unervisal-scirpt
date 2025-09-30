@@ -1,8 +1,15 @@
-
 if game.PlaceId == 137925884276740 then
+    -- Build a Plane
     loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20plane", true))()
+
+elseif game.PlaceId == 133719960214587 then
+    -- Steal Cookies
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/AURA.HUB/refs/heads/main/aura.hub.lua", true))()
+
 else
-    warn("only run in bluid a plane.")
+    warn("⚠️ This script only works in Build a Plane or Steal Cookies.")
+end
+
 
 
 
