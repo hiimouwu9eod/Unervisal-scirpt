@@ -1,0 +1,37 @@
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+    local Window = Rayfield:CreateWindow({
+        Name = "Universal Script Loader",
+        LoadingTitle = "Loading UI",
+        LoadingSubtitle = "Select Game Script",
+        ConfigurationSaving = {Enabled = false},
+        Discord = {Enabled = false},
+        KeySystem = false
+    })
+
+    local Tab = Window:CreateTab("Main", 4483362458)
+
+    -- Button: Build a Plane
+    Tab:CreateButton({
+        Name = "Load Build a Plane",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20plane", true))()
+        end
+    })
+
+    -- Button: Steal Cookies
+    Tab:CreateButton({
+        Name = "Load Steal Cookies",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/AURA.HUB/refs/heads/main/aura.hub.lua", true))()
+        end
+    })
+
+    -- Button: Build a Car
+    Tab:CreateButton({
+        Name = "Load Build a Car",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20car", true))()
+        end
+    })
+end
