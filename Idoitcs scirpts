@@ -1,19 +1,56 @@
-if game.PlaceId == 137925884276740 then
+-- Universal Game Loader
+local PLACE_BUILD_PLANE = 137925884276740
+local PLACE_STEAL_COOKIES = 133719960214587
+local PLACE_BUILD_CAR = 137925884276741
+
+if game.PlaceId == PLACE_BUILD_PLANE then
     -- Build a Plane
     loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20plane", true))()
 
-elseif game.PlaceId == 133719960214587 then
+elseif game.PlaceId == PLACE_STEAL_COOKIES then
     -- Steal Cookies
     loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/AURA.HUB/refs/heads/main/aura.hub.lua", true))()
 
+elseif game.PlaceId == PLACE_BUILD_CAR then
+    -- Build a Car
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20car", true))()
+
 else
-    warn("⚠️ This script only works in Build a Plane or Steal Cookies.")
+    -- Rayfield UI for other games
+    local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+
+    local Window = Rayfield:CreateWindow({
+        Name = "Universal Script Loader",
+        LoadingTitle = "Loading UI",
+        LoadingSubtitle = "Select Game Script",
+        ConfigurationSaving = {Enabled = false},
+        Discord = {Enabled = false},
+        KeySystem = false
+    })
+
+    local Tab = Window:CreateTab("Main", 4483362458)
+
+    -- Button: Build a Plane
+    Tab:CreateButton({
+        Name = "Load Build a Plane",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20plane", true))()
+        end
+    })
+
+    -- Button: Steal Cookies
+    Tab:CreateButton({
+        Name = "Load Steal Cookies",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/AURA.HUB/refs/heads/main/aura.hub.lua", true))()
+        end
+    })
+
+    -- Button: Build a Car
+    Tab:CreateButton({
+        Name = "Load Build a Car",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/Unervisal-scirpt/refs/heads/main/Bluid%20a%20car", true))()
+        end
+    })
 end
-
-
-
-
-if game.PlaceId == 111386538027749 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/hiimouwu9eod/AURA.HUB/refs/heads/main/aura.hub.lua",true))()
-else
-    warn("only run in steal cookie.")
